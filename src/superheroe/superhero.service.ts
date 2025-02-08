@@ -4,7 +4,7 @@ import {
   InternalServerErrorException,
 } from '@nestjs/common';
 import { CreateSuperheroDto } from './dto/create-superhero.dto';
-import { CreateSuperheroResponseDto } from './dto/create-superhero-response.dto';
+import { SuperheroResponseDto } from './dto/superheroes-response.dto';
 import { Superhero } from './entities/superhero.entity';
 import { SUPERHERO_ALREADY_EXISTS_RESPONSE } from './superhero.constant';
 import { DEFAULT_SUPERHERO_CREATE_ERROR } from 'src/app/app.constants';
@@ -31,7 +31,7 @@ export class SuperheroService {
     return superheroData;
   }
 
-  create(createSuperheroDto: CreateSuperheroDto): CreateSuperheroResponseDto {
+  create(createSuperheroDto: CreateSuperheroDto): SuperheroResponseDto {
     try {
       const existingSuperhero = this.findOneSuperhero(createSuperheroDto.name);
 
@@ -53,7 +53,7 @@ export class SuperheroService {
     }
   }
 
-  findAll() {
-    return `This action returns all superhero`;
+  findAll(): SuperheroResponseDto[] {
+    return this.superheroes.sort((a, b) => b.humilityScore - a.humilityScore);
   }
 }

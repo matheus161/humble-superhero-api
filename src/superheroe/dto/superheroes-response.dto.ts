@@ -1,6 +1,6 @@
 import { IsString, IsNumber } from 'class-validator';
 
-export class CreateSuperheroResponseDto {
+export class SuperheroResponseDto {
   @IsString()
   name: string;
 
