@@ -13,11 +13,11 @@ import { DEFAULT_SUPERHERO_CREATE_ERROR } from 'src/app/app.constants';
 export class SuperheroService {
   private readonly superheroes: Superhero[] = [];
 
-  findOneSuperhero(name: string): Superhero | null {
+  async findOneSuperhero(name: string): Promise<Superhero | null> {
     return this.superheroes.find((item) => item.name === name) || null;
   }
 
-  insertSuperhero(createSuperheroDto: CreateSuperheroDto) {
+  async insertSuperhero(createSuperheroDto: CreateSuperheroDto) {
     const superheroData: Superhero = {
       name: createSuperheroDto.name,
       superpower: createSuperheroDto.superpower,
@@ -31,9 +31,13 @@ export class SuperheroService {
     return superheroData;
   }
 
-  create(createSuperheroDto: CreateSuperheroDto): SuperheroResponseDto {
+  async create(
+    createSuperheroDto: CreateSuperheroDto,
+  ): Promise<SuperheroResponseDto> {
     try {
-      const existingSuperhero = this.findOneSuperhero(createSuperheroDto.name);
+      const existingSuperhero = await this.findOneSuperhero(
+        createSuperheroDto.name,
+      );
 
       if (existingSuperhero) {
         throw new ConflictException(
@@ -41,7 +45,8 @@ export class SuperheroService {
         );
       }
 
-      const newSuperhero: Superhero = this.insertSuperhero(createSuperheroDto);
+      const newSuperhero: Superhero =
+        await this.insertSuperhero(createSuperheroDto);
 
       return newSuperhero;
     } catch (error) {

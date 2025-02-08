@@ -8,7 +8,9 @@ export class SuperheroController {
   constructor(private readonly superheroService: SuperheroService) {}
 
   @Post()
-  create(@Body() createSuperheroDto: CreateSuperheroDto): SuperheroResponseDto {
+  async create(
+    @Body() createSuperheroDto: CreateSuperheroDto,
+  ): Promise<SuperheroResponseDto> {
     return this.superheroService.create(createSuperheroDto);
   }
 
