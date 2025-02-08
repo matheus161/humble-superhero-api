@@ -1,5 +1,6 @@
 import { INestApplication, ValidationPipe } from '@nestjs/common';
 import helmet from 'helmet';
+import { ThrottlerExceptionFilter } from '../filters/throttler-exception.filter';
 
 export default (app: INestApplication) => {
   app.useGlobalPipes(
@@ -13,4 +14,6 @@ export default (app: INestApplication) => {
   app.use(helmet());
 
   app.enableCors();
+
+  app.useGlobalFilters(new ThrottlerExceptionFilter());
 };
