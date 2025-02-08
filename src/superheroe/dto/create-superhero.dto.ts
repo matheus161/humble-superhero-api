@@ -17,7 +17,7 @@ export class CreateSuperheroDto {
 
   @IsNotEmpty()
   @IsPositive({ message: HUMILITY_SCORE_MIN_NUMBER_VALIDATION })
-  @Min(0, { message: HUMILITY_SCORE_MIN_NUMBER_VALIDATION })
+  @Min(1, { message: HUMILITY_SCORE_MIN_NUMBER_VALIDATION })
   @Max(10, { message: HUMILITY_SCORE_MAX_NUMBER_VALIDATION })
   humilityScore: number;
 }

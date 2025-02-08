@@ -3,7 +3,7 @@
  */
 
 export const HUMILITY_SCORE_MIN_NUMBER_VALIDATION =
-  'The humility score must be at least 0. Please enter a number greater than or equal to 0.';
+  'The humility score must be at least 1. Please enter a number greater than or equal to 1.';
 export const HUMILITY_SCORE_MAX_NUMBER_VALIDATION =
   'The humility score must be at most 10. Please enter a number less than or equal to 10.';
 export const NAME_REQUIRED_VALIDATION =
