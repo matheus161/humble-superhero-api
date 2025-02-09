@@ -86,7 +86,7 @@ If I had more time, I would focus on expanding the functionality and improving t
 
 #### Additional Routes:
 
-- Extend the API with more functionality, such as updating or deleting superheroes, and adding filtering options.
+- Extend the API with more functionality, such as updating or deleting superheroes, list pagination and adding filtering options.
 - Include a route for updating user profile information or changing their password.
 
 #### Enhanced Tests:
