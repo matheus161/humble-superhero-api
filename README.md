@@ -1,30 +1,14 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
-</p>
-
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
-
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg" alt="Donate us"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow" alt="Follow us on Twitter"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
-
 ## Description
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Welcome to the Humble Superhero API documentation! At our company, we believe every team member is a superhero in their own unique way, solving problems, building amazing things, and helping others along the journey.
+
+## 📂 Project structure
+
+| Type   | Name           | Description                                                  |
+| ------ | -------------- | ------------------------------------------------------------ |
+| folder | `node_modules` | Project dependencies managed by NPM                          |
+| folder | `src`          | The main folder that defines the behavior of the application |                                     |
+| folder | `.test`        | Folder containing the test files and test-related resources  |
 
 ## Project setup
 
@@ -43,6 +27,9 @@ $ npm run start:dev
 
 # production mode
 $ npm run start:prod
+
+# lint
+$ npm run lint
 ```
 
 ## Run tests
@@ -58,42 +45,60 @@ $ npm run test:e2e
 $ npm run test:cov
 ```
 
-## Deployment
+## Collaborative Development Workflow
 
-When you're ready to deploy your NestJS application to production, there are some key steps you can take to ensure it runs as efficiently as possible. Check out the [deployment documentation](https://docs.nestjs.com/deployment) for more information.
+To improve or expand this task with a teammate, I would suggest dividing the application into smaller tasks. Here's how we could approach it:
 
-If you are looking for a cloud-based platform to deploy your NestJS application, check out [Mau](https://mau.nestjs.com), our official platform for deploying NestJS applications on AWS. Mau makes deployment straightforward and fast, requiring just a few simple steps:
+#### Task Breakdown:
 
-```bash
-$ npm install -g mau
-$ mau deploy
-```
+- One teammate could focus on building and refining the API endpoints. He would handle database integration, validation, and API routing.
+- One teammate could be responsible for writing unit tests, integration tests, and API tests to ensure the system is reliable and bug-free.
 
-With Mau, you can deploy your application in just a few clicks, allowing you to focus on building features rather than managing infrastructure.
+#### Version Control & Branching:
 
-## Resources
+- Each team member would create their own branch for specific tasks or features.
+- Once the task is completed, the teammate would open a Pull Request (PR) to merge their work into the main branch.
 
-Check out a few resources that may come in handy when working with NestJS:
+#### Code Reviews:
 
-- Visit the [NestJS Documentation](https://docs.nestjs.com) to learn more about the framework.
-- For questions and support, please visit our [Discord channel](https://discord.gg/G7Qnnhy).
-- To dive deeper and get more hands-on experience, check out our official video [courses](https://courses.nestjs.com/).
-- Deploy your application to AWS with the help of [NestJS Mau](https://mau.nestjs.com) in just a few clicks.
-- Visualize your application graph and interact with the NestJS application in real-time using [NestJS Devtools](https://devtools.nestjs.com).
-- Need help with your project (part-time to full-time)? Check out our official [enterprise support](https://enterprise.nestjs.com).
-- To stay in the loop and get updates, follow us on [X](https://x.com/nestframework) and [LinkedIn](https://linkedin.com/company/nestjs).
-- Looking for a job, or have a job to offer? Check out our official [Jobs board](https://jobs.nestjs.com).
+- We’d review each other's code through pull requests, offering constructive feedback and suggestions for improvements.
 
-## Support
+#### Continuous Integration:
 
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
+- Set up a CI/CD pipeline to automatically run tests when new code is pushed, ensuring that everything works as expected and that there are no conflicts when merging into the main branch.
+- We'd set up test coverage to ensure code quality and prevent bugs
 
-## Stay in touch
+#### Documentation:
 
-- Author - [Kamil Myśliwiec](https://twitter.com/kammysliwiec)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
+- Both teammates would contribute to the documentation, ensuring that any new features or changes to the API are clearly outlined in the README or an API specification document.
 
-## License
+## If I had more time
 
-Nest is [MIT licensed](https://github.com/nestjs/nest/blob/master/LICENSE).
+If I had more time, I would focus on expanding the functionality and improving the overall user experience of the application. Here are a few things I would consider adding or enhancing:
+
+#### User Profiles:
+
+- Implement a user profile system to allow users to link superheroes to their specific accounts.
+
+#### Authentication:
+
+- Add authentication and authorization to the API, so only authorized users can add or modify superheroes. This could be done with JWT (JSON Web Tokens), OAuth or Cognito, providing security for users' data and actions.
+
+#### Additional Routes:
+
+- Extend the API with more functionality, such as updating or deleting superheroes, and adding filtering options.
+- Include a route for updating user profile information or changing their password.
+
+#### Enhanced Tests:
+
+- Write more comprehensive unit and integration tests to ensure the application is robust and handles edge cases.
+
+
+#### Rate Limiting and Throttling:
+
+- Enhance the throttler filter to ensure that the API can handle high traffic and prevent abuse.
+
+#### Swagger Documentation:
+
+- Expand the Swagger documentation to cover all new endpoints, providing detailed descriptions, response types, and sample requests to make it easier for developers to interact with the API.
+
