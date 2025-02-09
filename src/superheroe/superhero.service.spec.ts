@@ -74,7 +74,7 @@ describe('SuperheroService', () => {
         .spyOn(superheroService, 'findOneSuperhero')
         .mockResolvedValueOnce(existingSuperhero);
 
-      expect(superheroService.create(createSuperheroDto)).rejects.toThrow(
+      await expect(superheroService.create(createSuperheroDto)).rejects.toThrow(
         new ConflictException(
           SUPERHERO_ALREADY_EXISTS_RESPONSE(createSuperheroDto.name),
         ),
@@ -88,7 +88,7 @@ describe('SuperheroService', () => {
         .spyOn(superheroService, 'findOneSuperhero')
         .mockRejectedValue(new Error());
 
-      expect(superheroService.create(createSuperheroDto)).rejects.toThrow(
+      await expect(superheroService.create(createSuperheroDto)).rejects.toThrow(
         new InternalServerErrorException(DEFAULT_SUPERHERO_CREATE_ERROR),
       );
     });

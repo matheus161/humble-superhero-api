@@ -6,7 +6,7 @@ describe('SuperheroController', () => {
     create: jest.fn(),
   };
 
-  beforeEach(async () => {
+  beforeEach(() => {
     controller = new SuperheroController(superheroServiceMock as any);
   });
 
